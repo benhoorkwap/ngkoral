@@ -1,0 +1,61 @@
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+        min-height: 100%;
+    }
+    
+    .header {
+        height: 3.5rem;
+        background-color: #222;
+        
+    }
+    
+    .headerContainer {
+
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 93.75%;
+        margin: auto;
+        height: 2.25rem;
+
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+
+       
+
+    }
+    
+    .brandNameContainer {
+        flex: 1;
+      
+    }
+
+    .brandName {
+        display: block;
+        font-size: 1.125rem;
+        font-weight: bold;
+        color: #fff;
+        height: fit-content;
+        text-decoration: none;
+    }
+    
+    .hamburgerMenu {
+        flex-basis: 17.5%;
+
+        
+        height: 100%;
+    }
+
+    .hamburgerMenuBtn {
+        background-color: #007eff;
+        display: block;
+        height: 100%;
+        width: 100%;
+        border: none;
+        border-radius: 1rem / 50%;
+    }
+}
