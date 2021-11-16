@@ -4,10 +4,42 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faReact, faHtml5, faCss3, faFigma, faPhp, faLaravel, faPython, faNodeJs} from '@fortawesome/free-brands-svg-icons'
 import { faTwitter, faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { faBars, faDatabase, faFontAwesomeFlag } from '@fortawesome/free-solid-svg-icons'
-
+import FrontEndSection from '../../components/mobileServicesSection'
 import styles from '../../styles/mobile.module.css'
 
 
+const ServiceSectionThemes = {
+    darkTheme: {
+      backgroundColor: "#222",
+      foregroundColor: "#fff"
+    },
+    lightGrayTheme: {
+      backgroundColor: "rgba(169,169,169, 0.2)",
+      foregroundColor: "#222"
+    }
+  }
+  
+  const frontEndSectionIcons = [faReact, faHtml5, faFigma, faCss3];
+  const backEndSectionIcons = [faPhp, faLaravel, faPython, faNodeJs];
+  const databaseSectionIcons = [faDatabase, faDatabase, faDatabase, faDatabase]
+  
+  
+  const servicesSection = {
+    frontEndSection: {
+      title: "Learn Frontend Web Design with Us",
+      content: "Our team offers the best frontend web design in the industry in Africa. We can build clean and elegant user interfaces and provide better user experiences"
+    },
+  
+    backEndSection: {
+      title: "Learn Backend Programming with Us",
+      content: "Our team offers the best backend frameworks in the industry in Africa. We write clean and elegant backend code that will integrate with frontend frameworks"
+    },
+  
+    databaseSection: {
+      title: "Learn Database Management with Us",
+      content: "Our team offers accelerated database management expertise you can find in Africa. We can manage your databases with provision for scability "
+    }
+  }
 
 export default function Home() {
 
@@ -22,7 +54,7 @@ export default function Home() {
         <header className={styles.header}>
             <div className={styles.headerContainer}>
                 <div className={styles.brandNameContainer}>
-                <Link href='/'>
+                <Link href='/mobile'>
                     <a className={styles.brandName}>KORAL NG</a>
                 </Link>
                 </div>
@@ -33,6 +65,176 @@ export default function Home() {
                 </div>
             </div>
         </header>
+
+        <div className={styles.bannerContainer}>
+            <h3 className={styles.bannerTitle}>KORAL NG</h3>
+            <p className={styles.bannerDesc}>Providing tech solutions for africa</p>
+            <Link href="/learn-more">
+            <a className={styles.learnMoreNavLink}>Learn more</a>
+            </Link>
+        </div>
+
+        {/* <div className={styles.frontEndSection}>
+            <div className={styles.frontEndSectionContainer}>
+                
+                <div className={styles.frontEndSectionIcons}>
+                    <div>
+                        <FontAwesomeIcon icon={faReact} size="2x" color="white"/>
+                    </div>
+
+                    <div>
+                        <FontAwesomeIcon icon={faHtml5} size="2x" color="white"/>
+                    </div>
+                    <div>
+                        <FontAwesomeIcon icon={faFigma} size="2x" color="white"/>
+                    </div>
+                    <div>
+                        <FontAwesomeIcon icon={faCss3} size="2x" color="white"/>
+                    </div>
+                </div>
+
+                <div className={styles.frontEndSectionContent}>
+                <h3 className={styles.frontEndSectionContentTitle}>
+                    Learn Frontend Web Design with Us
+                </h3>
+
+                <p className={styles.frontEndSectionContentText}>
+                    Our team offers the best frontend web design in the industry in Africa. 
+                    We can build clean and elegan user interfaces and provide better user experiences
+                </p>
+                <button className={styles.frontEndSectionContentBtn}>
+                    Get Started with us
+                </button>
+                </div>
+            </div>
+
+        </div> */}
+
+        <FrontEndSection title={servicesSection.frontEndSection.title} contentText={servicesSection.frontEndSection.content} theme={ServiceSectionThemes.darkTheme} icons={frontEndSectionIcons}/>
+        <FrontEndSection title={servicesSection.backEndSection.title} contentText={servicesSection.backEndSection.content} theme={ServiceSectionThemes.lightGrayTheme} icons={backEndSectionIcons}/>
+        <FrontEndSection title={servicesSection.databaseSection.title} contentText={servicesSection.databaseSection.content} theme={ServiceSectionThemes.darkTheme} icons={databaseSectionIcons}/>
+
+        <footer className={styles.footer}>
+            <div className={styles.footerContainer}>
+                <div className={styles.footerContent}>
+                    <div className={styles.footerContentItem}>
+                        <h3 className={styles.footerContentItemTitle}>COMPANY</h3>
+                        <ul className={styles.footerContentListItems}>
+                            <li className={styles.footerContentListItem}>
+                                <Link href="/">
+                                    <a>What we do</a>
+                                </Link>
+                            </li>
+                            <li className={styles.footerContentListItem}>
+                                <Link href="/">
+                                    <a>Our Leadership</a>
+                                </Link>
+                            </li>
+                            <li className={styles.footerContentListItem}>
+                                <Link href="/">
+                                    <a>Careers</a>
+                                </Link>
+                            </li>
+                            <li className={styles.footerContentListItem}>
+                                <Link href="/">
+                                    <a>FAQs</a>
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>
+            
+                
+                    <div className={styles.footerContentItem}>
+                        <h3 className={styles.footerContentItemTitle}>ABOUT US</h3>
+                        <ul className={styles.footerContentListItems}>
+                            <li className={styles.footerContentListItem}>
+                                <Link href="/">
+                                    <a>Terms and Conditions</a>
+                                </Link>
+                            </li>
+                            <li className={styles.footerContentListItem}>
+                                <Link href="/">
+                                    <a>Privacy Policy</a>
+                                </Link>
+                            </li>
+                            <li className={styles.footerContentListItem}>
+                                <Link href="/">
+                                    <a>Cookie Policy</a>
+                                </Link>
+                            </li>
+                            <li className={styles.footerContentListItem}>
+                                <Link href="/">
+                                    <a>Complaints</a>
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>
+                
+
+
+
+
+
+                
+                    <div className={styles.footerContentItem}>
+                        <h3 className={styles.footerContentItemTitle}>SUPPORT</h3>
+                        <ul className={styles.footerContentListItems}>
+                            <li className={styles.footerContentListItem}>
+                                
+                                    <a>Email</a>
+                                
+                            </li>
+                            <li className={styles.footerContentListItem}>
+                                
+                                    <a className={styles.contactDetails}>ngkoral@gmail.com</a>
+                                
+                            </li>
+                            <li className={styles.footerContentListItem}>
+                                
+                                    <a>Mobile No</a>
+                                
+                            </li>
+                            <li className={styles.footerContentListItem}>
+                                
+                                    <a className={styles.contactDetails}>+234 (0) 7051557983</a>
+                                
+                            </li>
+                        </ul>
+                    </div>
+            </div>
+
+            <div className={styles.footerBottom}>
+                <div className={styles.copyright}>
+                    <span>&copy;2021. Koral NG</span>
+                </div>
+                <div className={styles.socialHandleContainer}>
+                <div>
+                <Link href="https://www.facebook.com/benhoorkwap">
+                  <a><FontAwesomeIcon icon={faFacebook} size="2x" color="#222"></FontAwesomeIcon></a>
+                </Link>
+              </div>
+
+              <div>
+                <Link href="https://www.twitter.com/bbuetsen">
+                  <a><FontAwesomeIcon icon={faTwitter} size="2x" color="#222"></FontAwesomeIcon></a>
+                </Link>
+              </div>
+
+              <div>
+                <Link href="https://www.instagram.com/bbuetsen">
+                  <a><FontAwesomeIcon icon={faInstagram} size="2x" color="#222"></FontAwesomeIcon></a>
+                </Link>
+              </div>
+                </div>
+            </div>
+
+
+            </div>
+        </footer>
+
+
+
+
         </div>
     )
 

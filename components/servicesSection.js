@@ -33,7 +33,7 @@ const ServicesSectionIcons = ({icons}) => {
           {
             icons.map((icon, index) => 
               <div key={index}>
-                <FontAwesomeIcon icon={icon} size="4x" />
+                <FontAwesomeIcon icon={icon} size="2x" />
               </div>)
           }
 
